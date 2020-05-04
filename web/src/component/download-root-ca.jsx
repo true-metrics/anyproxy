@@ -10,8 +10,8 @@ import { connect } from 'react-redux';
 import { message, Button, Spin } from 'antd';
 import ResizablePanel from 'component/resizable-panel';
 import { hideRootCA, updateIsRootCAExists } from 'action/globalStatusAction';
-import { MenuKeyMap } from 'common/Constant';
-import { getJSON, ajaxGet, postJSON } from 'common/ApiUtil';
+import { MenuKeyMap } from 'common/constant';
+import { getJSON, ajaxGet, postJSON } from 'common/apiUtil';
 
 import Style from './download-root-ca.less';
 import CommonStyle from '../style/common.less';
@@ -62,7 +62,7 @@ class DownloadRootCA extends React.Component {
         const content = (
             <div className={Style.qrCodeWrapper} >
                 <div dangerouslySetInnerHTML={imgDomContent} />
-                <span>Scan to download rootCA.crt to your Phone</span>
+                <span>Scan to download rootCA to your Phone</span>
             </div>
         );
 
